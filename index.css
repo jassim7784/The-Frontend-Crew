@@ -52,6 +52,7 @@ nav {
     margin-right: 159px;
 }
 
+
 .nav-item {
     padding-inline: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -62,6 +63,11 @@ nav {
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.25px;
+}
+
+.nav-items button:active,
+.nav-items button:focus {
+    background-color: #FFF6F6;
 }
 
 .nav-item .nav-link:hover {
@@ -110,7 +116,7 @@ nav {
 }
 
 .hero-heading {
-    font-size: 100px;
+    font-size: 72px;
     font-weight: 700;
     letter-spacing: 3.3px;
 }
@@ -129,25 +135,27 @@ nav {
     margin-top: 10vh;
     background-color: #0e1418;
     color: #fff;
+    margin-left: -10px;
 }
 
 .content-left {
     width: 400px;
     max-height: 200px;
-    text-align: right;
+    text-align: left;
 }
 
 .content-left p {
     display: -webkit-box;
-    -webkit-line-clamp: 7;
+    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    margin-right: 90px;
+    margin-right: 80px;
+    font-size: 16px;
 }
 
 .vertical-line {
     width: 1px;
-    height: 100px;
+    height: 180px;
     background-color: #fff;
 }
 
@@ -159,6 +167,7 @@ nav {
     display: flex;
     gap: 48px;
     margin-left: 90px;
+    margin-top: -50px;
 }
 
 .logo-section img {
