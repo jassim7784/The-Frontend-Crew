@@ -142,7 +142,7 @@ nav {
 
 .hero-subheading {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.9px;
 }
 
@@ -194,6 +194,47 @@ nav {
     margin-left: 10px;
 }
 
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+    .hero-heading {
+        font-size: 60px;
+        letter-spacing: 1.8px;
+    }
+
+    .hero-subheading {
+        font-size: 16px;
+        letter-spacing: 0.8px;
+    }
+
+    .centered-container {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .content-left {
+        max-width: none;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+    .content-right {
+        text-align: center;
+    }
+
+    .logo-section {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        margin-top: 20px;
+    }
+
+    .logo-section img {
+        margin-left: 0;
+    }
+}
+
 
 
 /* ----------About Section---------- */
@@ -207,7 +248,7 @@ nav {
 
 .about-heading {
     position: relative;
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 700;
     letter-spacing: 3.3px;
     color: #fff;
@@ -315,7 +356,7 @@ nav {
 
 .number-heading {
     position: relative;
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 700;
     letter-spacing: 3.3px;
     color: #fff;
@@ -398,5 +439,106 @@ nav {
 
     .number-box:last-child {
         margin-bottom: 0;
+    }
+}
+
+/* ----------Harness Section---------- */
+.harness-heading {
+    padding-top: 220px;
+    text-align: left;
+    color: #FFF;
+    font-size: 48px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.64px;
+}
+
+.harness-heading,
+.harness-subheading {
+    margin-left: 117px;
+}
+
+.harness-subheading {
+    margin-top: 32px;
+    color: #FFF;
+    font-size: 18px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.24px;
+    max-width: 759px;
+    height: 96px;
+}
+
+@media (max-width: 768px) {
+
+    .harness-heading,
+    .harness-subheading {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+.custom-button {
+    display: flex;
+    align-items: center;
+    width: 742px;
+    height: 48px;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 117px;
+}
+
+.email-input {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    font-size: 18px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.18px;
+    border: none;
+    outline: none;
+    background-color: #FFFFFF;
+    padding: 0 32px;
+}
+
+.signup-button {
+    width: 311px;
+    height: 48px;
+    background-color: #773EC6;
+    color: #FFF;
+    font-size: 18px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.18px;
+    border: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+    transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+    background-color: #5B2F8C;
+}
+
+.email-input:valid+.signup-button {
+    cursor: pointer;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .custom-button {
+        width: 100%;
+        margin-left: 0;
     }
 }
