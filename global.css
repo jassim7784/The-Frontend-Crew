@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    line-height: normal;
+    background-color: #0C1015;
+  }
+  
+  :root {
+    /* fonts */
+    --font-segoe-ui: "Segoe UI";
+  
+
+  
+    /* Colors */
+    --color-white: #fff;
+    --color-snow: #fff6f6;
+  }
+  
