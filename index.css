@@ -1135,7 +1135,6 @@ nav {
     /* Hide the background image by removing it */
 }
 
-
 .newsletter-main-heading {
     text-align: center;
 }
@@ -1167,6 +1166,7 @@ nav {
     margin-top: -24px;
     display: flex;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .form-container::before,
@@ -1246,7 +1246,7 @@ input[type="email"] {
     height: 53px;
     border-radius: 6px;
     background: #FFFEFE;
-    padding: 0 16px;
+    padding0 16px;
     font-size: 16px;
     border: none;
     box-shadow: none;
@@ -1291,40 +1291,33 @@ button:hover {
     transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .form-container {
+        flex-direction: column;
         align-items: center;
-        margin-right: 0;
     }
 
-    .newsletter-button {
-        margin-left: 0;
-        margin-right: 0;
+    .col-lg-4 {
+        width: 100%;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        margin-bottom: 20px;
     }
 
     input[type="text"],
     input[type="email"] {
         width: 100%;
+        max-width: 400px;
     }
 
     button {
         width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-newsletter {
-        background-color: #0e1418;
-        /* Set the background color */
-    }
-
-    .form-container {
-        align-items: center;
-        margin-right: 0;
-        background-image: none;
-        /* Hide the background image by removing it */
-        background-color: #0e1418;
-        /* Set the background color */
+        max-width: 400px;
     }
 }
 
