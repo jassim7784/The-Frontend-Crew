@@ -499,7 +499,6 @@ nav {
 .harness-heading,
 .harness-subheading {
     margin-left: 117px;
-    z-index: 3;
 }
 
 .harness-subheading {
@@ -516,14 +515,12 @@ nav {
 }
 
 @media (max-width: 768px) {
-
     .harness-heading,
     .harness-subheading {
         margin-left: 0;
         text-align: center;
     }
 }
-
 
 .custom-button {
     display: flex;
@@ -534,6 +531,7 @@ nav {
     border-radius: 10px;
     overflow: hidden;
     margin-left: 117px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .email-input {
@@ -574,7 +572,7 @@ nav {
     transform: translateY(-2px);
 }
 
-.email-input:valid+.signup-button {
+.email-input:valid + .signup-button {
     cursor: pointer;
     opacity: 1;
 }
@@ -591,6 +589,7 @@ nav {
 }
 
 /* ----------Conversation Section---------- */
+
 .hero-harness {
     position: relative;
 }
@@ -617,11 +616,11 @@ nav {
 .hero-conversation::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 50vh; /* Decreased the top position by 50vh */
     left: 0;
     border-radius: 490.219px;
-    background: linear-gradient(180deg, rgba(38, 3, 251, 0.6) 0%, rgba(220, 6, 255, 0.6) 100%);
-    filter: blur(250px);
+    background: linear-gradient(180deg, rgba(38, 3, 251, 0.6) 0%,rgba(220, 6, 255, 0.6) 100%);
+    filter: blur(300px);
     width: 490.219px;
     height: 490.219px;
     transform: rotate(-22.538deg);
@@ -683,6 +682,16 @@ nav {
     fill: #fff;
 }
 
+@media (max-width: 768px) {
+    .hero-events {
+        background-color: #0e1418;
+    }
+
+    .events-content::before,
+    .events-content::after {
+        display: none;
+    }
+}
 
 
 /* ----------Events section---------- */
@@ -700,6 +709,22 @@ nav {
     color: #FFF;
     z-index: 1;
     position: relative;
+}
+
+.events-content::before,
+.events-content::after {
+    content: "";
+    position: absolute;
+    top: 20vh;
+    right: 0;
+    border-radius: 590.219px;
+    background: linear-gradient(180deg, rgba(38, 3, 251, 0.4) 0%, rgba(220, 6, 255, 0.4) 100%);
+    filter: blur(250px); /* Decreased intensity of blur by 50% */
+    width: 290.219px;
+    height: 290.219px;
+    transform: rotate(158.197deg);
+    flex-shrink: 0;
+    z-index: -1;
 }
 
 .events-heading {
@@ -768,8 +793,8 @@ nav {
     transform: translate(-50%, -50%);
     text-align: center;
     margin-top: 18vh;
+    z-index: 2; /* Placing the events-moto on top of the gradient */
 }
-
 
 .events-moto-text {
     color: #FFF;
@@ -792,7 +817,7 @@ nav {
 
     .events-subheading {
         width: auto;
-        height: auto;
+       .height: auto;
         margin-top: 16px;
     }
 
@@ -821,6 +846,18 @@ nav {
 
     .event-github-button {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-events {
+        background-color: #0e1418;
+        /* Set the background color */
+    }
+
+    .events-content::before,
+    .events-content::after {
+        display: none;
     }
 }
 
