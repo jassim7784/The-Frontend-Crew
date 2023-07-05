@@ -776,6 +776,8 @@ nav {
     border: none;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
+    position: relative; /* Add position relative */
+    z-index: 2; /* Increase the z-index to bring it on top of the gradient */
 }
 
 .event-github-button img {
@@ -873,10 +875,43 @@ nav {
     align-items: center;
     text-align: center;
     margin-top: -20vh;
+    position: relative;
 }
 
 .partner-section {
     text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.partner-content {
+    position: relative;
+    z-index: 1;
+}
+
+.partner-content::before,
+.partner-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -117px;
+    border-radius: 346.55px;
+    background: linear-gradient(180deg, rgba(38, 3, 251, 0.80) 0%, rgba(220, 6, 255, 0.80) 100%);
+    filter: blur(176.73252868652344px);
+    width: 346.55px;
+    height: 346.55px;
+    transform: rotate(-22.538deg);
+    flex-shrink: 0;
+    z-index: -1;
+}
+
+.partner-content::before {
+    transform-origin: top left;
+}
+
+.partner-content::after {
+    transform-origin: bottom left;
 }
 
 .partner-heading {
@@ -911,7 +946,12 @@ nav {
     align-items: center;
     display: flex;
     justify-content: center;
+    position: relative;
+    /* Add position relative */
+    z-index: 2;
+    /* Increase the z-index to bring it on top of the gradient */
 }
+
 
 .partner-us-button {
     width: 300px;
@@ -962,7 +1002,6 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
-
 }
 
 .testimonials-section {
@@ -997,9 +1036,37 @@ nav {
     align-items: center;
     margin-top: 32px;
     flex-wrap: wrap;
+    position: relative; /* Add position relative for stacking */
+    overflow: hidden; /* Hide overflowing gradient */
 }
 
+.testimonials-container::before,
+.testimonials-container::after {
+    content: "";
+    position: absolute;
+    bottom: -50vh; /* Adjusted margin */
+    right: -50vh; /* Adjusted margin */
+    border-radius: 490.219px;
+    background: linear-gradient(180deg, rgba(38, 3, 251, 0.8) 0%, rgba(220, 6, 255, 0.8) 100%);
+    filter: blur(250px);
+    width: 490.219px;
+    height: 490.219px;
+    transform: rotate(-22.538deg);
+    flex-shrink: 0;
+}
+
+.testimonials-container::before {
+    transform-origin: bottom right;
+}
+
+.testimonials-container::after {
+    transform-origin: top right;
+}
+
+
 .testimonial-box {
+    position: relative; /* Add position relative */
+    z-index: 2; /* Place on top of the gradient */
     width: 400px;
     height: 260px;
     border-radius: 10px;
@@ -1011,6 +1078,8 @@ nav {
 }
 
 .testimonial-name {
+    position: relative; /* Add position relative */
+    z-index: 2; /* Place on top of the gradient */
     color: #FFF;
     font-size: 21px;
     font-family: "Segoe UI", sans-serif;
@@ -1023,6 +1092,8 @@ nav {
 }
 
 .testimonial-text {
+    position: relative; /* Add position relative */
+    z-index: 2; /* Place on top of the gradient */
     color: #FFF;
     font-size: 18px;
     font-family: "Segoe UI", sans-serif;
