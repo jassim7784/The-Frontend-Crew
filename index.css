@@ -106,6 +106,7 @@ nav {
     color: #fff;
     z-index: 2;
 }
+
 .hero-heading::before {
     content: "";
     position: absolute;
@@ -113,25 +114,27 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 160px; /* Adjusted border-radius value */
+    border-radius: 160px;
+    /* Adjusted border-radius value */
     background: linear-gradient(264deg, rgba(112, 0, 255, 0.5) 0%, rgba(6, 255, 240, 0.5) 100%);
     filter: blur(136.97015380859375px);
     z-index: -1;
-  }
-  
-  .hero-heading::after {
+}
+
+.hero-heading::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 160px; /* Adjusted border-radius value */
+    border-radius: 160px;
+    /* Adjusted border-radius value */
     background: linear-gradient(264deg, rgba(112, 0, 255, 0.5) 0%, rgba(6, 255, 240, 0.5) 100%);
     filter: blur(94.70753479003906px);
     z-index: -2;
-  }
-  
+}
+
 
 
 .hero-subheading {
@@ -240,9 +243,9 @@ nav {
     position: relative;
     z-index: 1;
     /* Added z-index */
-  }
-  
-  .about-heading {
+}
+
+.about-heading {
     position: relative;
     font-size: 48px;
     font-weight: 700;
@@ -251,9 +254,9 @@ nav {
     /* Removed background */
     z-index: 3;
     /* Increased z-index */
-  }
-  
-  .about-subheading {
+}
+
+.about-subheading {
     margin-top: 18px;
     font-size: 18px;
     font-weight: 400;
@@ -262,9 +265,9 @@ nav {
     /* Added text-shadow */
     z-index: 3;
     /* Increased z-index */
-  }
-  
-  .about-subheading::before {
+}
+
+.about-subheading::before {
     content: "";
     position: absolute;
     margin-top: 40vh;
@@ -276,12 +279,13 @@ nav {
     background: linear-gradient(-22.538deg, rgba(38, 3, 251, 0.4) 0%, rgba(220, 6, 255, 0.4) 100%);
     filter: blur(150px);
     z-index: -1;
-  }
-  
-  .about-subheading::after {
+}
+
+.about-subheading::after {
     content: "";
     position: absolute;
-    margin-top: 40vh; /* Adjusted margin-top value */
+    margin-top: 40vh;
+    /* Adjusted margin-top value */
     left: 50%;
     transform: translate(-50%, -50%) rotate(-22.538deg);
     /* Adjusted translation */
@@ -291,9 +295,9 @@ nav {
     background: linear-gradient(-22.538deg, rgba(38, 3, 251, 0.4) 0%, rgba(220, 6, 255, 0.4) 100%);
     filter: blur(150px);
     z-index: -2;
-  }
-  
-  .container {
+}
+
+.container {
     display: flex;
     justify-content: center;
     margin-left: 117px;
@@ -303,16 +307,16 @@ nav {
     /* Added position */
     z-index: 2;
     /* Added z-index */
-  }
-  
-  .box {
+}
+
+.box {
     border-radius: 15px;
     background-color: #21262d;
     margin-top: 96px;
     min-height: 430px;
     max-width: 600px;
-  }
-  
+}
+
 
 .box:first-child {
     margin-right: 75px;
@@ -489,11 +493,13 @@ nav {
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.64px;
+    z-index: 3;
 }
 
 .harness-heading,
 .harness-subheading {
     margin-left: 117px;
+    z-index: 3;
 }
 
 .harness-subheading {
@@ -585,19 +591,59 @@ nav {
 }
 
 /* ----------Conversation Section---------- */
+.hero-harness {
+    position: relative;
+}
+
+.harness-section {
+    position: relative;
+    z-index: 2;
+}
+
+.harness-content {
+    position: relative;
+    z-index: 2;
+}
+
 .hero-conversation {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
+    position: relative;
+}
+
+.hero-conversation::before,
+.hero-conversation::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 490.219px;
+    background: linear-gradient(180deg, rgba(38, 3, 251, 0.6) 0%, rgba(220, 6, 255, 0.6) 100%);
+    filter: blur(250px);
+    width: 490.219px;
+    height: 490.219px;
+    transform: rotate(-22.538deg);
+    flex-shrink: 0;
+}
+
+.hero-conversation::before {
+    transform-origin: top left;
+}
+
+.hero-conversation::after {
+    transform-origin: bottom left;
 }
 
 .conversation-section {
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .conversation-heading {
-    color: #FFF;
+    color: #fff;
     font-size: 48px;
     font-family: Segoe UI;
     font-style: normal;
@@ -607,7 +653,7 @@ nav {
 }
 
 .conversation-subheading {
-    color: #FFF;
+    color: #fff;
     text-align: center;
     font-size: 18px;
     font-family: Segoe UI;
@@ -634,8 +680,10 @@ nav {
 .conversation-icons img {
     width: 64px;
     height: 64px;
-    fill: #FFF;
+    fill: #fff;
 }
+
+
 
 /* ----------Events section---------- */
 .hero-events {
