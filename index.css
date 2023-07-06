@@ -32,12 +32,15 @@ p {
     font-weight: 300;
 }
 
-nav {
+.navbar {
     background-color: #0e1418;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar .navbar-brand {
-    margin-left: 159px;
+
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
@@ -49,10 +52,26 @@ nav {
 
 .offcanvas {
     background-color: #0e1418;
+    transform: translateX(100%);
 }
 
 .offcanvas-body {
     margin-right: 159px;
+}
+
+.navbar-toggler {
+    order: 2;
+    margin-left: auto;
+    margin-right: -100px;
+}
+
+.navbar-toggler-icon {
+    background-color: transparent;
+}
+
+.navbar-collapse {
+    flex-grow: 1;
+    order: 1;
 }
 
 .nav-item {
