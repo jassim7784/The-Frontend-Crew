@@ -606,7 +606,8 @@ nav {
     }
 
     .signup-button {
-        width: 120px;
+        width: 150px;
+        max-width: 450px;
         font-size: 16px;
     }
 }
@@ -1360,14 +1361,9 @@ input[type="email"]::placeholder {
 
     .col-lg-3 {
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
 
-    .form-section button {
-        margin-left: 12%;
-        align-items: center;
-        width: 100%;
-    }
 
     img {
         width: 100%;
