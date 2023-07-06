@@ -12,6 +12,10 @@ body {
     overflow-x: hidden;
     background-color: #0e1418;
     color: #fff6f6;
+    zoom: 1;
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 section {
@@ -91,7 +95,6 @@ nav {
 }
 
 /* ----------Hero Section---------- */
-
 .hero-section {
     text-align: center;
     padding-top: 220px;
@@ -114,7 +117,8 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 160px;
+    height: 250px;
+    border-radius: 260px;
     /* Adjusted border-radius value */
     background: linear-gradient(264deg, rgba(112, 0, 255, 0.5) 0%, rgba(6, 255, 240, 0.5) 100%);
     filter: blur(136.97015380859375px);
@@ -128,22 +132,22 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 160px;
+    height: 250px;
+    border-radius: 260px;
     /* Adjusted border-radius value */
     background: linear-gradient(264deg, rgba(112, 0, 255, 0.5) 0%, rgba(6, 255, 240, 0.5) 100%);
     filter: blur(94.70753479003906px);
     z-index: -2;
 }
 
-
-
 .hero-subheading {
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.9px;
     color: #fff;
+    z-index: 3;
+    /* Updated */
 }
-
 
 .centered-container {
     display: flex;
@@ -151,15 +155,20 @@ nav {
     align-items: center;
     flex-direction: row;
     margin-top: 10vh;
-    background-color: #0e1418;
+    background-color: transparent;
+    /* Updated */
     color: #fff;
     margin-left: -90px;
+    position: relative;
+    z-index: 3;
 }
+
 
 .content-left {
     width: 500px;
     max-height: 200px;
     text-align: left;
+    z-index: 3;
 }
 
 .content-left p {
@@ -169,16 +178,19 @@ nav {
     overflow: hidden;
     margin-right: 80px;
     font-size: 16px;
+    z-index: 3;
 }
 
 .vertical-line {
     width: 1px;
     height: 180px;
     background-color: #fff;
+    z-index: 3;
 }
 
 .content-right {
     text-align: right;
+    z-index: 3;
 }
 
 .logo-section {
@@ -186,10 +198,14 @@ nav {
     gap: 48px;
     margin-left: 90px;
     margin-top: -50px;
+    z-index: 3;
 }
 
 .logo-section img {
     margin-left: 10px;
+    max-width: 120px;
+    max-height: 120px;
+    z-index: 3;
 }
 
 @media (max-width: 768px) {
@@ -206,10 +222,13 @@ nav {
     .centered-container {
         margin-left: 0;
         padding: 20px;
+        position: relative;
+        z-index: 3;
     }
 
     .content-left {
         max-width: none;
+        z-index: 3;
     }
 
     .vertical-line {
@@ -218,6 +237,7 @@ nav {
 
     .content-right {
         text-align: center;
+        z-index: 3;
     }
 
     .logo-section {
@@ -225,14 +245,14 @@ nav {
         justify-content: center;
         gap: 24px;
         margin-top: 20px;
+        z-index: 3;
     }
 
     .logo-section img {
         margin-left: 0;
+        z-index: 3;
     }
 }
-
-
 
 /* ----------About Section---------- */
 .about-section {
@@ -699,7 +719,7 @@ nav {
 /* ----------Events section---------- */
 .hero-events {
     position: relative;
-    background-color: #0e1418;
+    background-color: transparent;
     /* Set the background color */
 }
 
@@ -859,7 +879,7 @@ nav {
 
 @media (max-width: 768px) {
     .hero-events {
-        background-color: #0e1418;
+        background-color: transparent;
         /* Set the background color */
     }
 
@@ -878,6 +898,7 @@ nav {
     text-align: center;
     margin-top: -20vh;
     position: relative;
+    background-color: transparent;
 }
 
 .partner-section {
@@ -1004,6 +1025,7 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: transparent;
 }
 
 .testimonials-section {
@@ -1039,6 +1061,7 @@ nav {
     margin-top: 32px;
     flex-wrap: wrap;
     position: relative;
+    background-color: transparent;
     /* Add position relative for stacking */
     overflow: hidden;
     /* Hide overflowing gradient */
@@ -1049,16 +1072,7 @@ nav {
     content: "";
     position: absolute;
     bottom: -50vh;
-    /* Adjusted margin */
-    right: -50vh;
-    /* Adjusted margin */
-    border-radius: 490.219px;
-    background: linear-gradient(180deg, rgba(38, 3, 251, 0.8) 0%, rgba(220, 6, 255, 0.8) 100%);
-    filter: blur(250px);
-    width: 490.219px;
-    height: 490.219px;
-    transform: rotate(-22.538deg);
-    flex-shrink: 0;
+
 }
 
 .testimonials-container::before {
@@ -1124,7 +1138,7 @@ nav {
 
 /* ----------Newsletter Section----------- */
 .hero-newsletter {
-    height: 50vh;
+    height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1137,6 +1151,7 @@ nav {
 
 .newsletter-main-heading {
     text-align: center;
+    z-index: 3;
 }
 
 .newsletter-heading {
@@ -1147,6 +1162,7 @@ nav {
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.64px;
+    z-index: 3;
 }
 
 .newsletter-subheading {
@@ -1160,6 +1176,7 @@ nav {
     letter-spacing: 0.24px;
     max-width: 900px;
     margin: 0 auto;
+    z-index: 3;
 }
 
 .form-container {
@@ -1216,7 +1233,7 @@ nav {
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.18px;
-    max-width: 420px;
+    max-width: 520px;
     margin-top: 3vh;
 }
 
@@ -1269,10 +1286,11 @@ input[type="email"]::placeholder {
 }
 
 button {
+    margin-top: 29px;
     width: 356px;
     height: 53px;
     border-radius: 10px;
-    background: #773EC6;
+    background-color: #773EC6;
     color: #FFF;
     text-align: center;
     font-size: 24px;
@@ -1285,6 +1303,10 @@ button {
     box-shadow: none;
     /* Apply transition to transform only */
     transition: transform 0.2s ease-in-out;
+    /* Add position relative */
+    position: relative;
+    /* Increase the z-index to bring it on top of the gradient */
+    z-index: 2;
 }
 
 button:hover {
@@ -1321,6 +1343,128 @@ button:hover {
     }
 }
 
+/* ----------Footer---------- */
+.footer {
+    margin-top: 20vh;
+}
+
+
+.footer-logo-div {
+    margin-left: 117px;
+}
+
+.footer-logo {
+    color: #FFF;
+    font-family: Segoe UI;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+}
+
+.footer-icons {
+    margin-top: 21px;
+    align-content: center;
+}
+
+.icon-group a {
+    text-decoration: none;
+    max-width: 24px;
+    max-height: 24px;
+}
+
+.footer-icon-vectors {
+    margin-left: 10px;
+}
+
+.footer-links {
+    align-items: flex-end;
+
+}
+
+.about-footer {
+    z-index: 2;
+}
+
+.about-heading-footer {
+    height: 32px;
+    color: #FFF;
+    font-family: Segoe UI;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.18px;
+}
+
+.about-content-footer {
+    color: #FFF;
+    font-family: Segoe UI;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.18px;
+}
+
+.about-content-footer a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo-div {
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+        z-index: 3;
+        /* Set a higher z-index to position the logo on top of the gradient */
+    }
+
+    .footer-icons {
+        display: none;
+        /* Hide the footer icon vectors on smaller screens */
+    }
+
+    .about-footer {
+        z-index: 2;
+    }
+
+    .about-heading-footer {
+        margin-top: 20px;
+    }
+}
+
+/* ----------Credit---------- */
+.credit {
+    margin-top: -50vh;
+    color: #FFF;
+    text-align: center;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
+}
+
+@media (max-width: 768px) {
+    .credit {
+        position: fixed;
+        left: 0;
+        right: 0;
+
+        margin-top: 0;
+    }
+
+}
 
 /* --------------------------------------------------------------------------- */
 
