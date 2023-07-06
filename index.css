@@ -19,7 +19,7 @@ body {
 }
 
 section {
-    min-height: 100vh;
+
     margin: 0;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     background-color: #0e1418;
@@ -924,6 +924,57 @@ p {
     }
 }
 
+@media (max-width: 992px) {
+    .events-section {
+        margin-left: 20px;
+    }
+
+    .events-heading {
+        font-size: 36px;
+    }
+
+    .events-subheading {
+        width: auto;
+        height: auto;
+        margin-top: 16px;
+    }
+
+    .event-github-button {
+        width: 100%;
+        max-width: 356px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .event-github-button img {
+        display: none;
+    }
+
+    .events-moto {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        margin-top: 18vh;
+        z-index: 2;
+        /* Placing the events-moto on top of the gradient */
+    }
+
+    .events-moto-text {
+        color: #FFF;
+        font-size: 18px;
+        font-family: "Segoe UI", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.32px;
+    }
+}
+
+
 @media (max-width: 480px) {
     .events-section {
         margin-left: 10px;
@@ -957,6 +1008,7 @@ p {
 
 /* ----------Partner Section---------- */
 .hero-partner {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1072,6 +1124,7 @@ p {
 
 @media screen and (max-width: 768px) {
     .hero-partner {
+        margin-top: 20vh;
         flex-direction: column;
         height: auto;
     }
@@ -1209,6 +1262,15 @@ p {
     justify-content: center;
     flex-shrink: 0;
     text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-testimonials {
+        margin-top: 20vh;
+        flex-direction: column;
+        height: auto;
+    }
+
 }
 
 /* ----------Newsletter Section----------- */
@@ -1559,7 +1621,7 @@ input[type="email"]::placeholder {
 
 /* ----------Credit---------- */
 .credit {
-    margin-top: -50vh;
+    margin-top: 30vh;
     color: #FFF;
     text-align: center;
     font-family: Segoe UI;
@@ -1580,6 +1642,7 @@ input[type="email"]::placeholder {
     }
 
 }
+
 @media (max-width: 992px) {
     .credit {
         position: fixed;
@@ -1611,4 +1674,3 @@ input[type="email"]::placeholder {
     }
 
 }
-
