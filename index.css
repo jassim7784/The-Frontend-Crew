@@ -227,7 +227,8 @@ nav {
     }
 
     .content-left {
-        max-width: none;
+        text-align: center;
+        margin-left: 80px;
         z-index: 3;
     }
 
@@ -236,21 +237,15 @@ nav {
     }
 
     .content-right {
-        text-align: center;
-        z-index: 3;
+        display: grid;
     }
 
     .logo-section {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 24px;
-        margin-top: 20px;
-        z-index: 3;
+        display: none;
     }
 
     .logo-section img {
-        margin-left: 0;
-        z-index: 3;
+        display: none;
     }
 }
 
@@ -546,6 +541,7 @@ nav {
 .custom-button {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 742px;
     height: 48px;
     background-color: #fff;
@@ -600,13 +596,19 @@ nav {
 
 @media (max-width: 768px) {
     .custom-button {
-        width: 100%;
-        margin-left: 0;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
     }
-}
 
-.custom-button input.email-input {
-    margin-right: 24px;
+    .email-input {
+        width: 250px;
+    }
+
+    .signup-button {
+        width: 120px;
+        font-size: 16px;
+    }
 }
 
 /* ----------Conversation Section---------- */
@@ -819,7 +821,7 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    margin-top: 18vh;
+    margin-top: 20vh;
     z-index: 2;
     /* Placing the events-moto on top of the gradient */
 }
@@ -850,11 +852,37 @@ nav {
     }
 
     .event-github-button {
-        width: auto;
+        width: 100%;
+        max-width: 356px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .event-github-button img {
+        display: none;
     }
 
     .events-moto {
-        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        margin-top: 18vh;
+        z-index: 2;
+        /* Placing the events-moto on top of the gradient */
+    }
+
+    .events-moto-text {
+        color: #FFF;
+        font-size: 18px;
+        font-family: "Segoe UI", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.32px;
     }
 }
 
@@ -874,13 +902,13 @@ nav {
 
     .event-github-button {
         font-size: 16px;
+        max-width: 300px;
     }
 }
 
 @media (max-width: 768px) {
     .hero-events {
         background-color: transparent;
-        /* Set the background color */
     }
 
     .events-content::before,
@@ -888,7 +916,6 @@ nav {
         display: none;
     }
 }
-
 
 /* ----------Partner Section---------- */
 .hero-partner {
@@ -976,15 +1003,17 @@ nav {
 }
 
 
-.partner-us-button {
+.partner-us-button button {
     width: 300px;
     height: 53px;
     background-color: #FFFFFF;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding-left: 32px;
+    padding-right: 32px;
+    /* Add padding to center the text horizontally */
     color: #000;
     font-size: 18px;
     font-family: Segoe UI;
@@ -996,11 +1025,6 @@ nav {
     border: none;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.partner-us-button img {
-    width: 24px;
-    height: 24px;
 }
 
 .partner-us-button:hover {
@@ -1016,6 +1040,19 @@ nav {
 
     .partner-button {
         margin-top: 32px;
+    }
+
+    .partner-us-button button {
+        width: 250px;
+        /* Adjust the width as desired for smaller screens */
+        justify-content: center;
+        /* Center the text */
+    }
+
+    .partner-us-button img {
+        width: 15px;
+        height: 15px;
+        /* Hide the image */
     }
 }
 
@@ -1281,36 +1318,38 @@ input[type="email"]::placeholder {
 }
 
 .newsletter-button {
-    margin-top: 38px;
-    border-radius: 10px;
+    margin-top: 32px;
 }
 
-button {
+.newsletter-button button {
     margin-top: 29px;
     width: 356px;
     height: 53px;
     border-radius: 10px;
-    background-color: #773EC6;
-    color: #FFF;
-    text-align: center;
-    font-size: 24px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 32px;
+    color: #000;
+    font-size: 18px;
     font-family: "Segoe UI", sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
-    letter-spacing: 0.24px;
-    /* Remove the box shadow */
-    box-shadow: none;
-    /* Apply transition to transform only */
-    transition: transform 0.2s ease-in-out;
-    /* Add position relative */
+    letter-spacing: 0.18px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
     position: relative;
-    /* Increase the z-index to bring it on top of the gradient */
     z-index: 2;
+
 }
 
-button:hover {
-    transform: translateY(-2px);
+.newsletter-button button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 992px) {
@@ -1319,9 +1358,15 @@ button:hover {
         align-items: center;
     }
 
-    .col-lg-4 {
+    .col-lg-3 {
         width: 100%;
         text-align: center;
+    }
+
+    .form-section button {
+        margin-left: 12%;
+        align-items: center;
+        width: 100%;
     }
 
     img {
@@ -1426,6 +1471,11 @@ button:hover {
         margin-bottom: 20px;
         z-index: 3;
         /* Set a higher z-index to position the logo on top of the gradient */
+    }
+
+    .col-lg-4 {
+        width: 100%;
+        text-align: center;
     }
 
     .footer-icons {
